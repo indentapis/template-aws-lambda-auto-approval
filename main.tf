@@ -10,8 +10,8 @@ terraform {
 
 # Indent + Auto-approval Integration
 
-# Details: https://github.com/indentapis/integrations/tree/df7a83d97d7220dc20566871e81d90a20ec160e0/packages/stable/indent-integration-auto-approval
-# Last Change: https://github.com/indentapis/integrations/commit/df7a83d97d7220dc20566871e81d90a20ec160e0
+# Details: https://github.com/indentapis/integrations/tree/17108bd50ac2085c099c40b348776fc655915b48/packages/stable/indent-integration-auto-approval
+# Last Change: https://github.com/indentapis/integrations/commit/17108bd50ac2085c099c40b348776fc655915b48
 
 module "idt-auto-approval-webhook" {
   source                = "git::https://github.com/indentapis/integrations//terraform/modules/indent_runtime_aws_lambda"
@@ -19,8 +19,8 @@ module "idt-auto-approval-webhook" {
   indent_webhook_secret = var.indent_webhook_secret
   artifact = {
     bucket       = "indent-artifacts-us-west-2"
-    function_key = "webhooks/aws/lambda/auto-approval-df7a83d97d7220dc20566871e81d90a20ec160e0-function.zip"
-    deps_key     = "webhooks/aws/lambda/auto-approval-df7a83d97d7220dc20566871e81d90a20ec160e0-deps.zip"
+    function_key = "webhooks/aws/lambda/auto-approval-17108bd50ac2085c099c40b348776fc655915b48-function.zip"
+    deps_key     = "webhooks/aws/lambda/auto-approval-17108bd50ac2085c099c40b348776fc655915b48-deps.zip"
   }
   env = {
     AUTO_APPROVAL_DURATION = var.auto_approval_duration
